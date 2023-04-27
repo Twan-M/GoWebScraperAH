@@ -5,5 +5,4 @@ import "gorm.io/gorm"
 type Scrape struct {
 	gorm.Model
 	Text string `json:"text"`
-	Date string `json:"date"`
 }
