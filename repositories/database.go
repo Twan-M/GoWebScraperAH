@@ -1,6 +1,8 @@
 package repositories
 
 import (
+	. "GoScraper/types"
+	"fmt"
 	"os"
 
 	"github.com/glebarez/sqlite"
@@ -15,7 +17,7 @@ func connection() *gorm.DB {
 	}
 
 	dsn := os.Getenv("CONNECTION_STRING")
-
+	fmt.Println(dsn)
 	var db *gorm.DB
 	var err error
 
@@ -24,6 +26,8 @@ func connection() *gorm.DB {
 	if err != nil {
 		panic("failed to connect database")
 	}
+
+	db.AutoMigrate(&Scrape{})
 
 	_connection = db
 
