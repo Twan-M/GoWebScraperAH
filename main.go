@@ -1,6 +1,7 @@
 package main
 
 import (
+	"GoScraper/handlers"
 	"GoScraper/repositories"
 	"log"
 	"os"
@@ -19,4 +20,6 @@ func main() {
 	if repositories.Connected() {
 		log.Println("Starting Database Connection")
 	}
+
+	handlers.TitleScraper()
 }
