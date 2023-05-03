@@ -22,4 +22,5 @@ func main() {
 	}
 
 	handlers.TitleScraper()
+	handlers.ShowHomePage()
 }
