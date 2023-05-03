@@ -17,12 +17,13 @@ func LoginHandler() {
 	if err != nil {
 		panic(err)
 	}
+
 	c.SetCookieJar(cookieJar)
 
+	username, password := GetUserHandler()
 	// Define the login URL, credentials and the POST data
 	loginURL := "https://euidp.aholddelhaize.com/"
-	username := "pnl05350"
-	password := "Patat123"
+
 	loginCredentials := map[string]string{
 		"username": username,
 		"password": password,
