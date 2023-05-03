@@ -22,5 +22,5 @@ func main() {
 	}
 
 	handlers.TitleScraper()
-	handlers.AuthPnlUser()
+	handlers.ShowHomePage()
 }
