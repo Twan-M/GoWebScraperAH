@@ -12,7 +12,7 @@ func LoginHandler() {
 	c := colly.NewCollector()
 
 	cookieJar, err := cookies.NewCollector(
-		cookies.AllowedDomains("example.com"),
+		cookies.AllowedDomains("euidp.aholddelhaize.com"),
 	)
 	if err != nil {
 		panic(err)
